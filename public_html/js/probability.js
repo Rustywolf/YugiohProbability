@@ -282,7 +282,8 @@ function calculate() {
 
 function recursiveCalculate(currentHand, currentHandSize, objects) {
     if (objects.length === 0 || currentHandSize >= getHandSize()) {
-        if (currentHandSize >= getHandSize() && objects.length > 0) {
+        if (currentHandSize == getHandSize()) {
+            console.log("O: " + objects.length);
             var noChance = false;
             for (var i = 0; i < objects.length; i++) {
                 if (objects[i].min != 0) {
@@ -294,6 +295,8 @@ function recursiveCalculate(currentHand, currentHandSize, objects) {
             if (noChance) {
                 return 0;
             }
+        } else if (currentHandSize > getHandSize()) {
+            return 0;
         }
         
         var newChance = 1;
@@ -317,9 +320,6 @@ function recursiveCalculate(currentHand, currentHandSize, objects) {
     var chance = 0;
 
     for (var i = obj.min; i <= obj.max; i++) {
-        if (currentHandSize + i > getHandSize()) {
-            return chance;
-        }
 
         currentHand.push(obj.amt);
         currentHand.push(i);
