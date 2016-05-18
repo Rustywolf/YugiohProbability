@@ -1,0 +1,57 @@
+.container {
+    text-align: center;
+}
+
+.content {
+
+}
+
+hr {
+    margin: 0px;
+}
+
+.card-types-container {
+    text-align: right;
+}
+
+.card-types-input {
+    text-align: right;
+}
+
+.titles {
+    text-align: center;
+    margin: 0px;
+}
+
+.probability-input {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.number-input {
+    text-align: center;
+    padding: 1px;
+}
+
+.calculate-button-panel {
+    text-align: right;
+}
+
+.example-well {
+    margin-top: 10px;
+    padding: 2px;
+}
+
+th {
+    text-align: center;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.text-center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
